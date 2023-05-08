@@ -15,6 +15,7 @@ public class AddScheduleActivity extends AppCompatActivity {
         setContentView(R.layout.activity_add_schedule);
     }
 
+    //팝업 밖 터치시 팝업 종료 방지
     @Override
     public boolean onTouchEvent(MotionEvent event) {
         if( event.getAction() == MotionEvent.ACTION_OUTSIDE ) {
