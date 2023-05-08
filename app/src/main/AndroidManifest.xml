@@ -11,11 +11,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.EngineeringDesign"
         tools:targetApi="31">
-
+        <activity
+            android:name=".FirstActivity"
+            android:exported="false" />
         <activity
             android:name=".AddScheduleActivity"
-            android:theme="@style/Theme.AppCompat.DayNight.Dialog"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/Theme.AppCompat.DayNight.Dialog" />
         <activity
             android:name=".MainActivity"
             android:exported="true">
