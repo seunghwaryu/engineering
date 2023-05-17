@@ -3,20 +3,48 @@
 package com.dryice.engineeringdesign;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import java.util.List;
+
 public class FirstActivity extends AppCompatActivity {
 
     private Button addButton;
     private Button openButton;
+    private List<Schedule> scheduleList;
+    private ScheduleDB scheduleDB = null;
+    private Context mContext = null;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_first);
+
+        mContext = getApplicationContext();
+        scheduleDB = ScheduleDB.getInstance(this);
+
+        class InsertRunnable implements Runnable {
+
+            @Override
+            public void run() {
+                try {
+                    scheduleList = ScheduleDB.getInstance(mContext).scheduleDao().getAll();
+                }
+                catch (Exception e) {
+
+                }
+            }
+        }
+        InsertRunnable insertRunnable = new InsertRunnable();
+        Thread t = new Thread(insertRunnable);
+        t.start();
 
         //일정 추가 버튼
         addButton = (Button) findViewById(R.id.add_schedule_button);
