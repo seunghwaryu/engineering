@@ -48,4 +48,23 @@
         app:layout_constraintTop_toBottomOf="@+id/button4"
         tools:layout_editor_absoluteX="0dp" />
 
+    <!-- 일정 추가창 띄우는 버튼(id 제외하고 마음대로 수정바람) -->
+    <Button
+        android:id="@+id/add_schedule_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="추가"
+        app:layout_constraintTop_toBottomOf="@+id/button5"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <!-- 목록 띄우는 버튼(id 제외하고 마음대로 수정바람) -->
+    <Button
+        android:id="@+id/open_schedule_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="목록"
+        app:layout_constraintTop_toBottomOf="@+id/add_schedule_button"
+        tools:layout_editor_absoluteX="0dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>

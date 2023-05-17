@@ -15,12 +15,13 @@
             android:layout_height="wrap_content"
             android:text="일정이름"
             android:textStyle="bold"/>
+
         <EditText
-            android:id="@+id/input_name"
+            android:id="@+id/edit_name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
-            android:inputType="text"/>
+            android:inputType="text" />
     </LinearLayout>
 
 
@@ -35,11 +36,13 @@
             android:layout_height="wrap_content"
             android:text="마감기한"
             android:textStyle="bold"/>
+
         <EditText
-            android:id="@+id/input_deadline"
+            android:id="@+id/edit_deadline"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"/>
+            android:layout_marginLeft="10dp"
+            android:inputType="date"/>
     </LinearLayout>
 
     <LinearLayout
